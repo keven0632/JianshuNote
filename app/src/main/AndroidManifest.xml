@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".part1.Part1dActivity"></activity>
+        <activity android:name=".part2.Part2LayoutActivity"></activity>
+        <activity android:name=".part1.Part1dActivity" />
         <activity android:name=".part1.Part1cActivity" />
         <activity
             android:name=".part1.Part1aActivity"
@@ -31,6 +32,12 @@
         </activity>
 
         <service android:name=".part1.Part1aService" />
+
+        <provider
+            android:name=".part1.Part1dMyProvider"
+            android:authorities="com.keven.jianshu.Part1dMyProvider"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

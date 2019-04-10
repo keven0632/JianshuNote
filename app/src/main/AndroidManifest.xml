@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".utils.MyApp"
@@ -13,10 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".part1.Part1cActivity"></activity>
+        <activity android:name=".part1.Part1dActivity"></activity>
+        <activity android:name=".part1.Part1cActivity" />
         <activity
             android:name=".part1.Part1aActivity"
-            android:theme="@android:style/Theme.Translucent"></activity>
+            android:theme="@android:style/Theme.Translucent" />
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize">
@@ -28,15 +31,6 @@
         </activity>
 
         <service android:name=".part1.Part1aService" />
-
-        <!--<receiver-->
-            <!--android:name=".part1.MyReceiver"-->
-            <!--android:enabled="true"-->
-            <!--android:exported="true">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="com.keven.receiver.MY_BROCASTRECEIVER" />-->
-            <!--</intent-filter>-->
-        <!--</receiver>-->
     </application>
 
 </manifest>

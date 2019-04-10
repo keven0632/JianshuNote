@@ -12,6 +12,7 @@ import com.keven.jianshu.part1.MyReceiver;
 import com.keven.jianshu.part1.MyReceiver2;
 import com.keven.jianshu.part1.Part1aActivity;
 import com.keven.jianshu.part1.Part1cActivity;
+import com.keven.jianshu.part1.Part1dActivity;
 import com.keven.jianshu.utils.LogUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Part1cActivity.class);
+                Intent intent = new Intent(MainActivity.this, Part1dActivity.class);
                 startActivity(intent);
             }
         });

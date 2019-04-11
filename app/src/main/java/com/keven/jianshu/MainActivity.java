@@ -2,20 +2,19 @@ package com.keven.jianshu;
 
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.keven.jianshu.part1.MyReceiver;
 import com.keven.jianshu.part1.MyReceiver2;
-import com.keven.jianshu.part1.Part1aActivity;
-import com.keven.jianshu.part1.Part1cActivity;
 import com.keven.jianshu.part1.Part1dActivity;
+import com.keven.jianshu.part2.Part2LayoutActivity;
 import com.keven.jianshu.utils.LogUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private IntentFilter filter;
     private MyReceiver receiver;
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         registerMyReceiver();
 
         TextView tv = findViewById(R.id.click);
+        TextView click_part2 = findViewById(R.id.click_part2);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        click_part2.setOnClickListener(this);
 
     }
 
@@ -108,5 +108,15 @@ public class MainActivity extends AppCompatActivity {
         LogUtils.i("A 的 onDestroy()");
         localBroadcastManager.unregisterReceiver(receiver);
         localBroadcastManager.unregisterReceiver(receiver2);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.click_part2:
+                Intent intent = new Intent(this, Part2LayoutActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

@@ -10,6 +10,6 @@ public class Part2LayoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_part2_layout);
+        setContentView(R.layout.activity_part2_constraintlayout);
     }
 }

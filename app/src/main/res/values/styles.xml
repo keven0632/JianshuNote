@@ -7,9 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <!-- 这里自定义了两个属性，一个是默认大小，一个是背景颜色-->
     <declare-styleable name="ViewProperty">
         <attr name="default_size" format="dimension"/>
         <attr name="backgroundColor" format="color"/>
-
     </declare-styleable>
 </resources>

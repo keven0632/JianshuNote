@@ -24,11 +24,6 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
 
         <service android:name=".part1.Part1aService"/>
@@ -40,6 +35,16 @@
             android:exported="true"/>
 
         <activity android:name=".part3.ShowActivity">
+        </activity>
+        <activity android:name=".part4.Part4AnimationActivity">
+
+        </activity>
+        <activity android:name=".part4.Part4LayoutSeven">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
     </application>
 

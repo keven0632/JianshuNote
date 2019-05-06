@@ -7,12 +7,15 @@ import com.keven.jianshu.R;
 
 import java.util.ArrayList;
 
+
+
 public class Part4LayoutSeven extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_part4_layout_seven);
+//        setContentView(R.layout.buybuybee_coupon_instructions);
 
         ArrayList<String> front=new ArrayList<>();
         front.add("https://hbimg.huabanimg.com/d9c9a645f96fccd73341b6ba430b486d19cef96193568-tUnXLB_fw658");
@@ -24,7 +27,7 @@ public class Part4LayoutSeven extends AppCompatActivity {
         front.add("https://hbimg.huabanimg.com/49b919f44e80004f09da0636d7367362964e3b59982d3-SYGEQ0_fw658");
 
         MySignInView viewById = findViewById(R.id.layout_mysignview);
-        viewById.setFrontImage(front);
+//        viewById.setFrontImage(front);
 
     }
 }

@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import com.keven.jianshu.R;
 
+
+
 public class Part4AnimationActivity extends AppCompatActivity {
 
     @Override

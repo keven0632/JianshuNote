@@ -9,9 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.keven.jianshu.R;
-import com.keven.jianshu.utils.MyApp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +27,7 @@ public class MySignInView extends ConstraintLayout implements View.OnClickListen
     private ImageView mIv_five;
     private ImageView mIv_six;
     private ImageView mIv_seven;
+    private int[] checkin_array={R.drawable.check_in1,R.drawable.check_in2,R.drawable.check_in3,R.drawable.check_in4,R.drawable.check_in5,R.drawable.check_in6,R.drawable.check_in7};
 
     public MySignInView(Context context) {
         super(context);
@@ -83,6 +82,13 @@ public class MySignInView extends ConstraintLayout implements View.OnClickListen
         findViewById(v.getId()).setClickable(false);
     }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int measuredWidth = getMeasuredWidth();
+        int height = measuredWidth;
+        setMeasuredDimension(measuredWidth, height);
+    }
 
     /**
      * 设置一个新的三维旋转的容器视图。只翻一般，然后设置新的现实内容
@@ -109,11 +115,11 @@ public class MySignInView extends ConstraintLayout implements View.OnClickListen
         view.startAnimation(rotation);// 执行上半场翻转动画
     }
 
-    public void setFrontImage(ArrayList<String> list) {
-        for (int i = 0; i < ivList.size(); i++) {
-            Glide.with(MyApp.getInstance()).load(list.get(i)).into(ivList.get(i));
-        }
-    }
+//    public void setFrontImage(ArrayList<String> list) {
+//        for (int i = 0; i < ivList.size(); i++) {
+//            Glide.with(MyApp.getInstance()).load(list.get(i)).into(ivList.get(i));
+//        }
+//    }
 
     /**
      * 执行完上半部分旋转之后，设置要显示的新的View然后继续执行下半部分旋转
@@ -162,7 +168,7 @@ public class MySignInView extends ConstraintLayout implements View.OnClickListen
                 rotation = new Util_Rotate3DAnimation(90, 0, centerX, centerY,
                         310.0f, false);
             }
-            mView.setImageResource(R.drawable.head2);
+            mView.setImageResource(checkin_array[ivList.indexOf(mView)]);
 
             rotation.setDuration(500);
             rotation.setFillAfter(true);

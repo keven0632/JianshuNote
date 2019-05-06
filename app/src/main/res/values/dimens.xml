@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="head_height">48dp</dimen>
+    <dimen name="dimen_6dp">6dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_25dp">25dp</dimen>
+    <dimen name="dimen_35dp">35dp</dimen>
+    <dimen name="dimen_50dp">50dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="dimen_150dp">150dp</dimen>
+    <dimen name="dimen_140dp">140dp</dimen>
+
+    <dimen name="tab_txt_size">14sp</dimen>
+    <dimen name="tab_height">36dp</dimen>
+
+    <dimen name="main_tab_host_height">56dp</dimen>
+    <dimen name="txt_size_title">18sp</dimen>
+    <dimen name="txt_size_title_action">14sp</dimen>
+    <dimen name="txt_size_title_right">15sp</dimen>
+    <dimen name="txt_size_14sp">14sp</dimen>
+    <dimen name="txt_size_16sp">16sp</dimen>
+    <dimen name="txt_size_17sp">17sp</dimen>
+    <dimen name="txt_size_18sp">18sp</dimen>
+    <dimen name="txt_size_20sp">20sp</dimen>
+
+    <dimen name="qrcode_height">120dp</dimen>
+    <dimen name="qrcode_width">120dp</dimen>
+
+    <!--alertview-->
+    <!--标题文字大小-->
+    <dimen name="textSize_alert_title">22sp</dimen>
+    <dimen name="textSize_actionsheet_title">14sp</dimen>
+    <!--标题文字高度-->
+    <dimen name="height_alert_title">60dp</dimen>
+    <dimen name="height_actionsheet_title">40dp</dimen>
+    <!--消息文字大小-->
+    <dimen name="textSize_alert_msg">15sp</dimen>
+    <dimen name="textSize_actionsheet_msg">14sp</dimen>
+    <!--消息距离底部间距-->
+    <dimen name="marginBottom_alert_msg">25dp</dimen>
+    <dimen name="marginBottom_actionsheet_msg">14dp</dimen>
+    <!--窗口模式左右两边到屏幕的间距-->
+    <dimen name="margin_alert_left_right">40dp</dimen>
+    <dimen name="margin_actionsheet_left_right">10dp</dimen>
+    <!--线条粗细-->
+    <dimen name="size_divier">1dp</dimen>
+    <!--按钮的高度-->
+    <dimen name="height_alert_button">48dp</dimen>
+    <!--按钮文字大小-->
+    <dimen name="textSize_alert_button">18sp</dimen>
+    <!--圆角-->
+    <dimen name="radius_alertview">15px</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+</resources>

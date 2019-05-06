@@ -8,8 +8,9 @@
     tools:context="com.keven.jianshu.part4.Part4LayoutSeven">
     <com.keven.jianshu.part4.MySignInView
         android:id="@+id/layout_mysignview"
-        android:layout_width="300dp"
-        android:layout_height="300dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:ignore="MissingConstraints"/>
     <include
         android:visibility="gone"
         layout="@layout/seven_signin_layout"

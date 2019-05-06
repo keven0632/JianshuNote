@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Jianshu</string>
+    <string name="instructions">instructions</string>
+    <string name="coupon_a_question">What is the Buybuybee coupon?</string>
+    <string name="coupon_a_rule2">There are two types of coupons: discount coupon and token coupon.
+        For discount coupon, the percent of discount is specified on the coupon with the expiry
+        date. You can use the coupon and get the corresponding discount when purchasing tokens on
+        Buybuybee. For token coupon, the token value is specified on the coupon with the expiry
+        date, approximately 2 dollars equals 10 tokens. You can use the coupon and get deduction of
+        the total amount when purchasing tokens on Buybuybee.
+    </string>
+    <string name="coupon_a_rule3">Buybuybee provides many ways for users to acquire free coupons.
+        Please check the details on the app.
+    </string>
+    <string name="coupon_a_rule1">The Buybuybee coupon is issued and approved by Buybuybee which can
+        be used to deduct corresponding token amount or to get certain discount when purchasing
+        tokens on Buybuybee. The coupon is redeemable only on the Buybuybee website and app.
+    </string>
+    <string name="coupon_b_question">Conditions of Use</string>
+    <string name="coupon_b_rule1">A coupon can be used only on the condition that the value of the
+        purchase of goods is equal to or greater than the denomination of the coupon.
+    </string>
+    <string name="coupon_b_rule2">A coupon is non-refundable and cannot be redeemed for tokens or
+        cash in part or full.
+    </string>
+    <string name="coupon_b_rule3">A coupon is valid for a single transaction only. The coupon once
+        used is treated as invalid and cannot be selected for any usage.
+    </string>
+    <string name="coupon_b_rule4">A coupon is valid for a limited time only and expires on the date
+        specified on the coupon. The coupon once expired is treated as invalid and cannot be
+        selected for any usage. Strictly no extension of the expiry date from the date of issue will
+        be allowed.
+    </string>
 </resources>

@@ -13,6 +13,8 @@ import com.keven.jianshu.part1.MyReceiver2;
 import com.keven.jianshu.part1.Part1dActivity;
 import com.keven.jianshu.part2.Part2LayoutActivity;
 import com.keven.jianshu.part4.Part4LayoutSeven;
+import com.keven.jianshu.part5.Part5RootActivity;
+import com.keven.jianshu.part6.Part6ImageActivity;
 import com.keven.jianshu.skeleton.SkeletonActivity;
 import com.keven.jianshu.utils.LogUtils;
 
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         click_part2.setOnClickListener(this);
         findViewById(R.id.click_part4).setOnClickListener(this);
         findViewById(R.id.click_skeleton).setOnClickListener(this);
+        findViewById(R.id.click_animation).setOnClickListener(this);
+        findViewById(R.id.click_imageloader).setOnClickListener(this);
 
     }
 
@@ -127,6 +131,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.click_skeleton:
                 startActivity(new Intent(this, SkeletonActivity.class));
+                break;
+            case R.id.click_animation:
+                startActivity(new Intent(this, Part5RootActivity.class));
+                break;
+            case R.id.click_imageloader:
+                startActivity(new Intent(this, Part6ImageActivity.class));
                 break;
         }
     }

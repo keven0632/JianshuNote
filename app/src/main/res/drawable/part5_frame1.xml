@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <!-- 定义一个动画帧，Drawable为img0，持续时间50毫秒 -->
+
+    <item android:drawable="@drawable/uncheck_in1" android:duration="200"/>
+
+    <item android:drawable="@drawable/uncheck_in2" android:duration="200"/>
+
+    <item android:drawable="@drawable/uncheck_in3" android:duration="200"/>
+
+    <item android:drawable="@drawable/uncheck_in4" android:duration="200"/>
+
+    <item android:drawable="@drawable/uncheck_in5" android:duration="200"/>
+
+    <item android:drawable="@drawable/uncheck_in6" android:duration="200"/>
+</animation-list>

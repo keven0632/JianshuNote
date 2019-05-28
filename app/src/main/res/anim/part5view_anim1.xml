@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 透明度变化，从 1 到 0-->
+    <alpha
+        android:duration="5000"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0"
+    />
+    <!-- 缩放，宽高都是从 1 到 0
+         pivotX、pivotY 代表缩放中心点的横竖坐标
+         interpolator 代表动画模式，我设置为先加速、后减速-->
+    <scale
+        android:duration="5000"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="0.0"
+        android:toYScale="0.0"
+    />
+    <!-- 平移动画，从左上角到右下角-->
+    <translate
+        android:duration="5000"
+        android:fromXDelta="150"
+        android:fromYDelta="150"
+        android:toXDelta="200"
+        android:toYDelta="200"/>
+    <!-- 旋转动画，fromDegrees 初始角度
+          结束角度 toDegrees-->
+    <rotate
+        android:duration="5000"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="+360"/>
+
+</set>

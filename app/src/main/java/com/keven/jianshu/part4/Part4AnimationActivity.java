@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import com.keven.jianshu.R;
 
 
-
 public class Part4AnimationActivity extends AppCompatActivity {
 
     @Override
@@ -20,12 +19,11 @@ public class Part4AnimationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_part4_animation);
 
 
-        final ImageView iv_animation=findViewById(R.id.iv_animation);
+        final ImageView iv_animation = findViewById(R.id.iv_animation);
         iv_animation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                applyRotation(true,iv_animation,0,90);
-                applyRotation(false,iv_animation,0,-90);
+                applyRotation(false, iv_animation, 0, -90);
             }
         });
     }
@@ -33,14 +31,10 @@ public class Part4AnimationActivity extends AppCompatActivity {
     /**
      * 设置一个新的三维旋转的容器视图。只翻一般，然后设置新的现实内容
      *
-     * @param zheng
-     *            一个判断机制 如果为true 则向右翻转，如果false则向左翻转
-     * @param view
-     *            传入的片段
-     * @param start
-     *            起始位置
-     * @param end
-     *            结束位置
+     * @param zheng 一个判断机制 如果为true 则向右翻转，如果false则向左翻转
+     * @param view  传入的片段
+     * @param start 起始位置
+     * @param end   结束位置
      */
     public void applyRotation(final boolean zheng, final View view,
                               final float start, final float end) {
@@ -81,6 +75,7 @@ public class Part4AnimationActivity extends AppCompatActivity {
         public void onAnimationRepeat(Animation animation) {
         }
     }
+
     /**
      * 添加要显示的新的View，并执行下半部分的旋转操作
      */
@@ -111,6 +106,7 @@ public class Part4AnimationActivity extends AppCompatActivity {
             rotation.setFillAfter(true);
             rotation.setInterpolator(new DecelerateInterpolator());
             mView.startAnimation(rotation);
+
         }
     }
 

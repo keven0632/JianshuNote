@@ -13,7 +13,7 @@ public class MyImageLoader {
      * 构造函数
      */
     public MyImageLoader() {
-        //设置最大换粗空间为运行时内存的 1/8
+        //设置最大缓存空间为运行时内存的 1/8
         int maxMemory = (int) Runtime.getRuntime().maxMemory();
         int cacheSize = maxMemory / 8;
         mLruCache = new LruCache<String, Bitmap>(cacheSize) {
@@ -23,6 +23,7 @@ public class MyImageLoader {
                 return value.getByteCount();
             }
         };
+
 
     }
 

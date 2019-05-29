@@ -9,7 +9,9 @@ import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.keven.jianshu.R;
+import com.keven.jianshu.utils.MyApp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,11 +117,15 @@ public class MySignInView extends ConstraintLayout implements View.OnClickListen
         view.startAnimation(rotation);// 执行上半场翻转动画
     }
 
-//    public void setFrontImage(ArrayList<String> list) {
-//        for (int i = 0; i < ivList.size(); i++) {
-//            Glide.with(MyApp.getInstance()).load(list.get(i)).into(ivList.get(i));
-//        }
-//    }
+    /**
+     * 设置初始图片
+     * @param list
+     */
+    public void setFrontImage(ArrayList<String> list) {
+        for (int i = 0; i < ivList.size(); i++) {
+            Glide.with(MyApp.getInstance()).load(list.get(i)).into(ivList.get(i));
+        }
+    }
 
     /**
      * 执行完上半部分旋转之后，设置要显示的新的View然后继续执行下半部分旋转

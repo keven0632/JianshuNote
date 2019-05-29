@@ -29,11 +29,12 @@ public class Part6ImageActivity extends AppCompatActivity {
     private static final int SUCCESS = 0x0001;
     private static final int FAIL = 0x0002;
     private MyHandler mHandler;
-    private ImageView mImageView;
-    private MyImageLoader mImageLoader;
+    private static ImageView mImageView;
+    private static MyImageLoader mImageLoader;
     private Button mBt_load;
 
-    class MyHandler extends Handler {
+    static class MyHandler extends Handler {
+        //使用弱引用，避免内存泄露
         WeakReference<AppCompatActivity> mWeakReference;
 
         public MyHandler(AppCompatActivity activity) {

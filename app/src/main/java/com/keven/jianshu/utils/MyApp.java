@@ -11,6 +11,8 @@ import com.umeng.message.PushAgent;
 import com.umeng.message.UmengNotificationClickHandler;
 import com.umeng.message.entity.UMessage;
 
+import org.litepal.LitePal;
+
 public class MyApp extends Application {
 
     private static MyApp myApp = null;
@@ -20,6 +22,7 @@ public class MyApp extends Application {
         super.onCreate();
         myApp = this;
 
+        LitePal.initialize(this);
         initUmeng();
     }
 

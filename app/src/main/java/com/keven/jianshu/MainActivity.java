@@ -1,13 +1,17 @@
 package com.keven.jianshu;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.keven.jianshu.litepal.LitePalActivity;
 import com.keven.jianshu.part1.MyReceiver;
 import com.keven.jianshu.part1.MyReceiver2;
 import com.keven.jianshu.part1.Part1dActivity;
@@ -51,7 +55,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.click_skeleton).setOnClickListener(this);
         findViewById(R.id.click_animation).setOnClickListener(this);
         findViewById(R.id.click_imageloader).setOnClickListener(this);
+        findViewById(R.id.click_litepal).setOnClickListener(this);
 
+        getPermission();
+    }
+
+    /**
+     * 获取权限
+     */
+    private void getPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (this.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            }else {
+//                mImei = DeviceUtil.getIMEI(this);
+            }
+        }
     }
 
     private void registerMyReceiver() {
@@ -137,6 +156,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.click_imageloader:
                 startActivity(new Intent(this, Part6ImageActivity.class));
+                break;
+            case R.id.click_litepal:
+                startActivity(new Intent(this, LitePalActivity.class));
                 break;
         }
     }

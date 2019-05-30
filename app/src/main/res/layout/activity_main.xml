@@ -56,6 +56,13 @@
                 android:gravity="center"
                 android:text="第六部分：图片缓存"
             />
+            <TextView
+                android:id="@+id/click_litepal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="数据库操作"
+            />
         </LinearLayout>
     </ScrollView>
 

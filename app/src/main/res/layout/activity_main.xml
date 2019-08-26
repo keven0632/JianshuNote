@@ -63,6 +63,20 @@
                 android:gravity="center"
                 android:text="数据库操作"
             />
+            <TextView
+                android:id="@+id/click_ioc"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="IOC 注入"
+            />
+            <TextView
+                android:id="@+id/click_handler"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="Handler"
+                />
         </LinearLayout>
     </ScrollView>
 

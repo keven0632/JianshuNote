@@ -1,4 +1,4 @@
-package com.keven.jianshu.litepal;
+package com.keven.jianshu.part7_litepal;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

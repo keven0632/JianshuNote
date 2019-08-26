@@ -1,0 +1,14 @@
+ext {
+    // app 相关版本控制
+    versions = [
+            sdkMinVersion     : 21,
+            sdkTargetVersion  : 28,
+
+            sdkCompileVersion : 28,
+
+            appVersionCode    : 1,
+            appVersionName    : "1.0.0"
+    ]
+
+
+}

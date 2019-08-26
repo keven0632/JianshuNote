@@ -6,7 +6,7 @@
     <version value="1"/>
     <!--model类的包名+类名-->
     <list>
-        <mapping class="com.keven.jianshu.litepal.IbeaconBean"/>
+        <mapping class="com.keven.jianshu.part7_litepal.IbeaconBean"/>
     </list>
 </litepal>
 

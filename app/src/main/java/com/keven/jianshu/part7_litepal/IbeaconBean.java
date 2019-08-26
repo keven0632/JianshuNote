@@ -1,4 +1,4 @@
-package com.keven.jianshu.litepal;
+package com.keven.jianshu.part7_litepal;
 
 import org.litepal.crud.LitePalSupport;
 

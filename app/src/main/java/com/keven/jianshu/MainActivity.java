@@ -11,7 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.keven.jianshu.litepal.LitePalActivity;
+import com.keven.jianshu.ioc.IocActivity;
+import com.keven.jianshu.part7_litepal.LitePalActivity;
+import com.keven.jianshu.netUtil.RetrofitManager;
 import com.keven.jianshu.part1.MyReceiver;
 import com.keven.jianshu.part1.MyReceiver2;
 import com.keven.jianshu.part1.Part1dActivity;
@@ -19,8 +21,14 @@ import com.keven.jianshu.part2.Part2LayoutActivity;
 import com.keven.jianshu.part4.Part4LayoutSeven;
 import com.keven.jianshu.part5.Part5RootActivity;
 import com.keven.jianshu.part6.Part6ImageActivity;
+import com.keven.jianshu.part8_handler.Part8HandlerActivity;
 import com.keven.jianshu.skeleton.SkeletonActivity;
 import com.keven.jianshu.utils.LogUtils;
+
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -56,8 +64,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.click_animation).setOnClickListener(this);
         findViewById(R.id.click_imageloader).setOnClickListener(this);
         findViewById(R.id.click_litepal).setOnClickListener(this);
+        findViewById(R.id.click_ioc).setOnClickListener(this);
+        findViewById(R.id.click_handler).setOnClickListener(this);
 
         getPermission();
+
+//        getNet();
+    }
+
+    private void getNet() {
+        RetrofitManager.getInstance().api().getTop250(1, 1).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(String s) {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
     }
 
     /**
@@ -67,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (this.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-            }else {
+            } else {
 //                mImei = DeviceUtil.getIMEI(this);
             }
         }
@@ -159,6 +195,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.click_litepal:
                 startActivity(new Intent(this, LitePalActivity.class));
+                break;
+            case R.id.click_ioc:
+                startActivity(new Intent(this, IocActivity.class));
+                break;
+            case R.id.click_handler:
+                startActivity(new Intent(this, Part8HandlerActivity.class));
                 break;
         }
     }

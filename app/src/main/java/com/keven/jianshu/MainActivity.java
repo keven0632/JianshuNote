@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.keven.jianshu.ioc.IocActivity;
+import com.keven.jianshu.part11_retrofit.Part11RetrofitActivity;
 import com.keven.jianshu.part7_litepal.LitePalActivity;
 import com.keven.jianshu.netUtil.RetrofitManager;
 import com.keven.jianshu.part1.MyReceiver;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.click_litepal).setOnClickListener(this);
         findViewById(R.id.click_ioc).setOnClickListener(this);
         findViewById(R.id.click_handler).setOnClickListener(this);
+        findViewById(R.id.click_retrofit).setOnClickListener(this);
 
         getPermission();
 
@@ -201,6 +203,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.click_handler:
                 startActivity(new Intent(this, Part8HandlerActivity.class));
+                break;
+            case R.id.click_retrofit:
+                startActivity(new Intent(this, Part11RetrofitActivity.class));
                 break;
         }
     }

@@ -77,6 +77,13 @@
                 android:gravity="center"
                 android:text="Handler"
                 />
+            <TextView
+                android:id="@+id/click_retrofit"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="Retrofit"
+                />
         </LinearLayout>
     </ScrollView>
 

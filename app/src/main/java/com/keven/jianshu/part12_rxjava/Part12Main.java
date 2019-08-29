@@ -1,7 +1,5 @@
 package com.keven.jianshu.part12_rxjava;
 
-import com.keven.jianshu.utils.LogUtils;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
